@@ -1,0 +1,175 @@
+/*
+  TerraJournal v0.1.0
+  2026 Sachin Suresh
+  Licensed under GNU GPLv3 
+*/
+
+/**************/
+/* CSS Resets */
+/**************/
+
+/* Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove any default user agent margins */
+*:not(dialog) {
+    margin: 0;
+}
+
+/***************/
+/* Type scale /*/
+/***************/
+
+h1 {
+    font-size: 2.986rem;
+
+    @media screen and (max-width: 576px) {
+        font-size: 2.488rem;
+    }
+}
+
+h2 {
+    font-size: 2.488rem;
+
+    @media screen and (max-width: 576px) {
+        font-size: 2.074rem;
+    }
+}
+
+h3 {
+    font-size: 2.074rem;
+
+    @media screen and (max-width: 576px) {
+        font-size: 1.728rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+}
+
+/***************/
+/* Base styles */
+/***************/
+
+:root {
+    --page-content-max-width: 35rem;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.015rem;
+    line-height: 1.6;
+    min-height: 100vh;
+    background: #dbeafe;
+    background: linear-gradient(135deg, #dbeafe, #93c5fd, #c4b5fd);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    max-width: var(--page-content-max-width);
+
+    & a {
+        display: inline-block;
+        text-decoration: none;
+        margin-bottom: 1rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    & h1 {
+        margin-bottom: 1rem;
+
+        &:not(#article-header)::after {
+            content: '';
+            display: inline-block;
+            width: 1rem;
+            height: 2.5rem;
+            margin-left: 0.75rem;
+            background: black;
+            animation: blinkingCursor 1s steps(1) infinite            
+        }
+    }
+}
+
+nav, article {
+    flex-grow: 1;
+    max-width: var(--page-content-max-width);
+}
+
+nav {
+    & h3 {
+        margin-bottom: 2rem;
+    }
+
+    & #article-links {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        & .article-link {
+            display: flex;
+            flex-basis: 100%;
+
+            &:hover {
+                cursor: pointer;
+                outline: 0.125rem solid black;
+                outline-offset: 1rem;
+                border-radius: 0.5rem;
+                animation: headingHover 900ms steps(1) infinite   
+            }
+
+            & > a {
+                display: inline-block;
+                flex-grow: 1;
+                padding-right: 1rem;
+                color: black;
+                text-decoration: none;
+            }
+            
+            & span {
+                align-self: flex-start;
+            }
+        }
+    }
+}
+
+article {
+    & p:nth-of-type(1n+2) {
+        margin-top: 1rem;
+    }
+}
+
+/**************/
+/* Keyframes /*/
+/**************/
+
+@keyframes blinkingCursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes headingHover {
+    25% {
+        outline-style: dashed;
+    }
+    50% {
+        outline-style: dotted;
+    }
+    75% {
+        outline-style: dashed;
+    }
+}
