@@ -2,6 +2,8 @@
 
 A **proof of concept** module that uses a pre-designed and pre-developed HTML/CSS template to generate a new personal journal / blog website with article pages.
 
+<br>
+
 ## Architecture
 
 The module creates the following files:
@@ -14,11 +16,15 @@ The module creates the following files:
 
 The articles folder will contain up to *N* `.html` files, where *N* is the amount of articles passed as module variable arguments.
 
+<br>
+
 ## Requirements
 
 - Terraform version `~>1.17.0`
 - Hashicorp/local provider version `~>2.9.1`
 - Hashicorp/external provider version `~>2.4.2`
+
+<br>
 
 ## Usage Example
 
@@ -41,6 +47,8 @@ module "my_blog_website" {
 }
 ```
 
+<br>
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -53,13 +61,15 @@ articles | List of objects representing each article to generate an HTML page fo
   -- entry_date | Date of the article entry. | string | n/a | yes |
   -- entry_content | Content of the article entry. | string | n/a | yes |
 
-
+<br>
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | is_every_folder_and_file_created_successfully | A boolean flag variable that checks to ensure that every folder and file was created succesfully. This does NOT check the contents of files. |
+
+<br>
 
 ## Notes / Known Issues
 
@@ -68,6 +78,8 @@ articles | List of objects representing each article to generate an HTML page fo
 - This module uses the "hashicorp/external" provider to execute a Bash script that verifies all website files were created successfully. Due to the dependency on Bash, using this module may encounter issues on certain operating systems without access to it.
 
 - Currently, this module does not check if the contents of files match what is expected.
+
+<br>
 
 ## License
 
