@@ -2,6 +2,13 @@
 
 resource "local_file" "index_html_markup_file" {
   content  = <<EOT
+    <!--
+        TerraJournal v0.1.0
+        2026 Sachin Suresh
+        Licensed under GNU GPLv3 
+        https://github.com/SureshS13/TerraJournal
+    -->
+
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -23,7 +30,7 @@ resource "local_file" "index_html_markup_file" {
           </div>
         </nav>
         <footer>
-          Built with <a href>TerraJournal</a> ❤️
+          Built with <a href="https://github.com/SureshS13/TerraJournal" target="_blank">TerraJournal</a> ❤️
         </footer>
       </body>
     </html>
@@ -33,6 +40,13 @@ resource "local_file" "index_html_markup_file" {
 
 resource "local_file" "styles_css_stylesheet_file" {
   content  = <<EOT
+    /*
+        TerraJournal v0.1.0
+        2026 Sachin Suresh
+        Licensed under GNU GPLv3 
+        https://github.com/SureshS13/TerraJournal
+    */
+
     /**************/
     /* CSS Resets */
     /**************/
@@ -210,6 +224,13 @@ resource "local_file" "article_html_markup_file" {
   # Using the for_each meta argument, we want to dynamically create individual article HTML files for every article inputted
   for_each = { for article in var.articles : "${article.entry_name}${article.entry_date}" => article }
   content  = <<EOD
+    <!--
+        TerraJournal v0.1.0
+        2026 Sachin Suresh
+        Licensed under GNU GPLv3 
+        https://github.com/SureshS13/TerraJournal
+    -->
+
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -229,7 +250,7 @@ resource "local_file" "article_html_markup_file" {
           <p>${each.value.entry_content}</p>
         </article>
         <footer>
-          Built with <a href>TerraJournal</a> ❤️
+          Built with <a href="https://github.com/SureshS13/TerraJournal" target="_blank">TerraJournal</a> ❤️
         </footer>
       </body>
     </html>
