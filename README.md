@@ -76,8 +76,6 @@ articles | List of objects representing each article to generate an HTML page fo
 
 ## Notes / Known Issues
 
-- This is a proof of concept. It has not been rigorously tested for cross-platform compatability, **so please use with caution.**
-
 - This module uses the "hashicorp/external" provider to execute a Bash script that verifies all website files were created successfully. Due to the dependency on Bash, using this module may encounter issues on certain operating systems without access to it.
 
 - Currently, this module does not check if the contents of files match what is expected.
