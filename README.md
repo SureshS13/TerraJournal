@@ -1,6 +1,9 @@
-# TerraJournal
+<h1 align="center">TerraJournal</h1>
 
-A **proof of concept** module that uses a pre-designed and pre-developed HTML/CSS template to generate a new personal journal / blog website with article pages.
+> [!WARNING]
+> This is a proof of concept. It has not been rigorously tested for cross-platform compatability, **so please use with caution.**
+
+A module that uses a pre-designed and pre-developed HTML/CSS template to generate a new personal journal / blog website with article pages.
 
 <br>
 
