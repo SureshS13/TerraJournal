@@ -33,7 +33,7 @@ The articles folder will contain up to *N* `.html` files, where *N* is the amoun
 
 ```hcl
 module "my_blog_website" {
-    source              = "INSERT_HERE"
+    source              = "git::https://github.com/SureshS13/TerraJournal.git//TerraJournal"
 
     journal_name        = "Jane Doe's Journal"
     journal_description = "This is my new journal."
