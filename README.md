@@ -1,3 +1,5 @@
+<img width="1309" height="245" alt="TerraJournalLogo-V1" src="https://github.com/user-attachments/assets/9888a710-65c0-471d-a317-116eef731f18" />
+
 <h1 align="center">TerraJournal</h1>
 
 > [!WARNING]
